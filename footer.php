@@ -15,7 +15,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
 <!-- TOP Footer banner - WIDGET -->
-<?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
+<?php // get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
 
 <div class="wrapper wrapper-footer" id="wrapper-footer">		
 

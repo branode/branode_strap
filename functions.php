@@ -31,3 +31,27 @@ function add_child_theme_textdomain() {
     load_child_theme_textdomain( 'understrap-child', get_stylesheet_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
+
+/**
+ *  This will hide the Divi "Project" post type.
+ *  Thanks to georgiee (https://gist.github.com/EngageWP/062edef103469b1177bc#gistcomment-1801080) for his improved solution.
+ */
+add_filter( 'et_project_posttype_args', 'mytheme_et_project_posttype_args', 10, 1 );
+function mytheme_et_project_posttype_args( $args ) {
+  return array_merge( $args, array(
+    'public'              => false,
+    'exclude_from_search' => false,
+    'publicly_queryable'  => false,
+    'show_in_nav_menus'   => false,
+    'show_ui'             => false
+  ));
+}
+// Remove Divi builder style 
+// function deregister_styles() {
+    //$is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
+    //if( $is_page_builder_used ) {
+    //    wp_dequeue_style('et-builder-modules-style');
+    //    wp_dequeue_style('et-builder-modules-style-css');
+    //}
+// }
+// add_action( 'wp_print_styles', 'deregister_styles', 100 );

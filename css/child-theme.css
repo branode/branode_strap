@@ -11637,3 +11637,19 @@ figure.woocommerce-product-gallery__wrapper {
     border: 1px solid #e9ecef; }
 
 /*# sourceMappingURL=child-theme.css.map */
+.wrapper-footer {
+    background: #313755;
+    color: #f8f9fa;
+}
+.wrapper-footer-bottom {
+    background: #d9d2c9;
+}
+.wrapper-footer-credits {
+    padding: 15px 0;
+}
+.wrapper-footer-bottom .social-links {
+    text-align: right;
+}
+.bg-primary {
+    background-color: #d9d2c9 !important;
+}
